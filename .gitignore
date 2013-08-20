@@ -1,2 +1,6 @@
 vim/backups/
 vim/bundle/
+xmonad/*-x86_64-linux
+xmonad/*.errors
+xmonad/*.hi
+xmonad/*.o
