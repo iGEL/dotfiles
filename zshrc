@@ -36,10 +36,15 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-. /home/igel/dev/dotfiles/prompt.zsh
+. /home/igel/dev/files/prompt.zsh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export SOLR_PORT=8080
 export RUBYMINE_JDK=/home/igel/dev/jdk1.7.0_25
 export STUDIO_JDK=/home/igel/dev/jdk1.7.0_25
+
+alias lock='gnome-screensaver-command -l'
+alias vol='amixer set Master'
+
+export BROWSER=/usr/bin/firefox

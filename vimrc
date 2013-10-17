@@ -22,7 +22,6 @@ set autoread                    " Reload files changed outside of vim
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
-set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
@@ -61,7 +60,7 @@ set expandtab
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-set nowrap       "Don't wrap lines
+set wrap         "wrap lines
 set linebreak    "Wrap lines at convenient points
 
 " No swap files
