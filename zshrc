@@ -38,6 +38,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 . /home/igel/dev/files/prompt.zsh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export SOLR_PORT=8080

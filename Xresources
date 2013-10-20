@@ -1,0 +1,14 @@
+#include "/home/igel/dev/files/x-resources/solarized"
+#include "/home/igel/dev/files/x-resources/font"
+
+URxvt.scrollstyle: plain
+URxvt*loginShell: true
+URxvt.perl-ext-common: default,clipboard,matcher,keyboard-select
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.colorUL: #4682B4
+URxvt.keysym.M-Delete: perl:matcher:list
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
