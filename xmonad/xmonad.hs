@@ -16,6 +16,7 @@ main = do
     , focusedBorderColor = myFocusedBorderColor
     , borderWidth = myBorderWidth
     , workspaces = myWorkspaces
+    , focusFollowsMouse = False
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")

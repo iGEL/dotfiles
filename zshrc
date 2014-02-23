@@ -48,5 +48,7 @@ export STUDIO_JDK=/home/igel/dev/jdk1.7.0_25
 
 alias lock='gnome-screensaver-command -l'
 alias vol='amixer set Master'
+alias suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend && lock'
 
 export BROWSER=/usr/bin/firefox
+export PATH=~/.cabal/bin:$PATH

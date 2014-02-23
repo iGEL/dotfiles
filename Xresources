@@ -1,14 +1,28 @@
-#include "/home/igel/dev/files/x-resources/solarized"
-#include "/home/igel/dev/files/x-resources/font"
+#include "/home/igel/.dotfiles/x-resources/solarized"
+#include "/home/igel/.dotfiles/x-resources/font"
 
-URxvt.scrollstyle: plain
 URxvt*loginShell: true
-URxvt.perl-ext-common: default,clipboard,matcher,keyboard-select
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
-URxvt.colorUL: #4682B4
-URxvt.keysym.M-Delete: perl:matcher:list
+URxvt.scrollstyle: plain
+URxvt.saveLines: 4096
+URxvt.urgentOnBell: true
+URxvt.intensityStyles: false
+
+URxvt.perl-ext-common: default,url-select,keyboard-select,font-size
+
+!keyboard-select: select & copy text without the mouse
+!url-select: Copy or open URLs with the keyboard
+! Get them from https://github.com/muennich/urxvt-perls
+!font-size: Change font-size on the fly
+! Get it from https://github.com/majutsushi/urxvt-font-size
+
+URxvt.url-select.launcher: xdg-open
+URXvt.url-select.underline: true
+URxvt.keysym.M-u: perl:url-select:select_next
+
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym:M-s: perl:keyboard-select:search
+
+URxvt.keysym.C-Up: perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-S-Up: perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal

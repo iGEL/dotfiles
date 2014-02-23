@@ -34,3 +34,5 @@ Bundle "kien/ctrlp.vim"
 " New powerline
 Bundle 'bling/vim-airline'
 
+" Airline theme
+Bundle 'paranoida/vim-airlineish'
