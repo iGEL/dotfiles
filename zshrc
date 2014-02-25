@@ -38,13 +38,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 . /home/igel/dev/files/prompt.zsh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export SOLR_PORT=8080
-export RUBYMINE_JDK=/home/igel/dev/jdk1.7.0_25
 export STUDIO_JDK=/home/igel/dev/jdk1.7.0_25
+export REDIS_PATH=/usr/bin/redis-server
 
 alias lock='gnome-screensaver-command -l'
 alias vol='amixer set Master'

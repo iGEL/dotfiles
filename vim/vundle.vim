@@ -27,6 +27,8 @@ Bundle "tpope/vim-endwise"
 Bundle "tomtom/tcomment_vim"
 
 " == Other additions ==
+" The solarized theme
+Bundle 'altercation/vim-colors-solarized'
 " Use git inside of vim
 Bundle 'tpope/vim-fugitive'
 " File search
