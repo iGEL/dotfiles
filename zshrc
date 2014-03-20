@@ -32,6 +32,7 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
+zstyle ":completion:*:commands" rehash 1
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
@@ -46,4 +47,7 @@ alias vol='amixer set Master'
 alias suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend && lock'
 
 export BROWSER=/usr/bin/firefox
-export PATH=~/.cabal/bin:$PATH
+export PATH=./bin:$PATH
+
+# Show message of the day in new consoles
+for i in /etc/update-motd.d/*; do if [ "$i" != "/etc/update-motd.d/98-fsck-at-reboot" ]; then $i; fi; done
