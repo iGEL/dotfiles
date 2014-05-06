@@ -13,37 +13,31 @@ nnoremap <silent> ,t :CtrlP<CR>
 nnoremap <silent> ,b :CtrlPBuffer<cr>
 nnoremap <silent> <C-b> :CtrlPBuffer<cr>
 
-" Cmd-Shift-P to clear the cache
-nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
-
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much
 " more likely to find the correct thing first. mnemonic 'jump to [something]'
-map ,jm :CtrlP app/models<CR>
+map ,ja :CtrlP app<CR>
+map ,jA :CtrlP app/assets<CR>
 map ,jc :CtrlP app/controllers<CR>
-map ,jv :CtrlP app/views<CR>
+map ,jC :CtrlP config<CR>
+map ,jd :CtrlP db<CR>
 map ,jh :CtrlP app/helpers<CR>
+map ,jj :CtrlP app/assets/javascripts<CR>
 map ,jl :CtrlP lib<CR>
+map ,jm :CtrlP app/models<CR>
+map ,jM :CtrlP app/mailers<CR>
 map ,jp :CtrlP public<CR>
 map ,js :CtrlP spec<CR>
-map ,jf :CtrlP fast_spec<CR>
-map ,jd :CtrlP db<CR>
-map ,jC :CtrlP config<CR>
+map ,jS :CtrlP app/assets/stylesheets<CR>
+map ,jv :CtrlP app/views<CR>
 map ,jV :CtrlP vendor<CR>
-map ,jF :CtrlP factories<CR>
-map ,jT :CtrlP test<CR>
-
-"Cmd-Shift-(M)ethod - jump to a method (tag in current file)
-"Ctrl-m is not good - it overrides behavior of Enter
-nnoremap <silent> <D-M> :CtrlPBufTag<CR>
 
 " The top results seems to be better. Also, we want more results, so lets go
 " with 30
 let g:ctrlp_match_window='order:ttb,max:30'
 
-" The Silver Searcher
 if executable('ag')
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " Use ag (the Silver Searcher) in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
