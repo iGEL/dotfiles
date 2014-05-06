@@ -45,8 +45,6 @@ set number                      " Show line numers
 set guioptions-=m               "remove menu bar
 set guioptions-=T               "remove toolbar
 
-set hidden                      " http://items.sjbach.com/319/configuring-vim-right
-
 " Indentation
 
 set autoindent
