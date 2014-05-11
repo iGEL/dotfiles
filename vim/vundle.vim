@@ -31,6 +31,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'altercation/vim-colors-solarized'
 " Use git inside of vim
 Plugin 'tpope/vim-fugitive'
+" Show signs for git
+Plugin 'airblade/vim-gitgutter'
 " File search
 Plugin 'kien/ctrlp.vim'
 " New powerline
