@@ -1,40 +1,44 @@
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " == Language support ==
 " Improved Rails support
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 " Support for templates and CSS/JS
-Bundle "slim-template/vim-slim"
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim'
+Plugin 'kchmck/vim-coffee-script'
 " HAML + SASS
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-haml'
 
 " == Insert support ==
 " Edit reoccurring words at once as in sublime
-Bundle "terryma/vim-multiple-cursors"
+Plugin 'terryma/vim-multiple-cursors'
 " Insert and delete matching brackets and quotes
-Bundle "Raimondi/delimitMate"
+Plugin 'Raimondi/delimitMate'
 " Insert closing end after def, if etc
-Bundle "tpope/vim-endwise"
+Plugin 'tpope/vim-endwise'
 " Add/removes comments
-Bundle "tomtom/tcomment_vim"
+Plugin 'tomtom/tcomment_vim'
 
 " == Other additions ==
 " The solarized theme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 " Use git inside of vim
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " File search
-Bundle "kien/ctrlp.vim"
+Plugin 'kien/ctrlp.vim'
 " New powerline
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 
 " Airline theme
-Bundle 'paranoida/vim-airlineish'
+Plugin 'paranoida/vim-airlineish'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
