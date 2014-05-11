@@ -51,7 +51,7 @@ export BROWSER=/usr/bin/firefox
 export PATH=./bin:$PATH
 
 # Show message of the day in new consoles
-for i in /etc/update-motd.d/*; do if [ "$i" != "/etc/update-motd.d/98-fsck-at-reboot" ]; then $i; fi; done
+for i in /etc/update-motd.d/*; do if [ "$i" != "/etc/update-motd.d/98-fsck-at-reboot" ]; then $i 2>/dev/null; fi; done
 
 function beep_on_return () (
   echo -ne '\a'
