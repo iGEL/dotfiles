@@ -3,7 +3,7 @@ set nocompatible                " choose no compatibility with legacy vi
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
@@ -21,12 +21,15 @@ set visualbell                  " No sounds
 set autoread                    " Reload files changed outside of vim
 filetype plugin indent on       " load file type plugins + indentation
 
-"" Whitespace
+" Whitespace
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
 
-"" Searching
+
+" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " ... incrementally while typing
 set ignorecase                  " searches are case insensitive...
@@ -37,7 +40,8 @@ if has("gui_running")
 
   color solarized               " our color theme
   set bg=dark
-
+  set guioptions-=m               "remove menu bar
+  set guioptions-=T               "remove toolbar
 endif
 
 " Line numbering
@@ -47,21 +51,11 @@ set relativenumber              " But let them be relative to the cursor positio
 autocmd InsertEnter * silent! :set norelativenumber
 autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
 
-set guioptions-=m               "remove menu bar
-set guioptions-=T               "remove toolbar
-
 " Indentation
 
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
-
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
 
 set wrap         "wrap lines
 set linebreak    "Wrap lines at convenient points
