@@ -40,7 +40,12 @@ if has("gui_running")
 
 endif
 
+" Line numbering
 set number                      " Show line numers
+set relativenumber              " But let them be relative to the cursor position
+" In Insert mode, we want absolute numbers
+autocmd InsertEnter * silent! :set norelativenumber
+autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
 
 set guioptions-=m               "remove menu bar
 set guioptions-=T               "remove toolbar
