@@ -1,6 +1,7 @@
 # Set up the prompt
 
 autoload -Uz promptinit
+autoload -Uz add-zsh-hook
 # promptinit
 # prompt adam1
 
@@ -51,3 +52,8 @@ export PATH=./bin:$PATH
 
 # Show message of the day in new consoles
 for i in /etc/update-motd.d/*; do if [ "$i" != "/etc/update-motd.d/98-fsck-at-reboot" ]; then $i; fi; done
+
+function beep_on_return () (
+  echo -ne '\a'
+)
+add-zsh-hook precmd beep_on_return
