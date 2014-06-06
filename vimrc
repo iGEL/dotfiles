@@ -94,4 +94,5 @@ set sidescroll=1
 
 " Colors
 colorscheme solarized
-set cul " Highlight current line
+set cursorline " Highlight current line
+set cursorcolumn " dito for the culumn
