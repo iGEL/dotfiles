@@ -47,9 +47,9 @@ endif
 " Line numbering
 set number                      " Show line numers
 set relativenumber              " But let them be relative to the cursor position
-" In Insert mode, we want absolute numbers
-autocmd InsertEnter * silent! :set norelativenumber
-autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
+" They are slow during moving, so lets ignore them
+autocmd CursorMoved,CursorMovedI * if &relativenumber | set norelativenumber | endif
+autocmd CursorHold,CursorHoldI * set relativenumber
 
 " Indentation
 
@@ -94,5 +94,12 @@ set sidescroll=1
 
 " Colors
 colorscheme solarized
-set cursorline " Highlight current line
-set cursorcolumn " dito for the culumn
+" Highlight current line & column
+set cul
+set cuc
+" It's slow, so don't do it during moving the cursor
+au CursorHold,CursorHoldI * set cul | set cuc
+au CursorMoved,CursorMovedI * if &cul | set nocul | set nocuc | endif
+
+" Update stuff after 500ms
+set updatetime=500
