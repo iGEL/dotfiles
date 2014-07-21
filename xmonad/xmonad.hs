@@ -5,6 +5,7 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 import XMonad.Hooks.UrgencyHook
+import XMonad.Hooks.SetWMName
 
 main = do
   xmobar <- spawnPipe "xmobar"
@@ -17,6 +18,7 @@ main = do
     , borderWidth = myBorderWidth
     , workspaces = myWorkspaces
     , focusFollowsMouse = False
+    , startupHook = setWMName "LG3D"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")
