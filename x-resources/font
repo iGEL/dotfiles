@@ -1,1 +1,9 @@
 *font: xft:DejaVu Sans Mono for Powerline:pixelsize=14
+
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.antialias: rgba
+Xft.rgba: rgb
+
+emacs.font: DejaVu Sans Mono 10
+Emacs.FontBackend: xft
