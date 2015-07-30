@@ -16,6 +16,10 @@ Plugin 'kchmck/vim-coffee-script'
 " HAML + SASS
 Plugin 'tpope/vim-haml'
 
+" == Syntax highlightning ==
+" Dockerfile
+Plugin 'ekalinin/Dockerfile.vim'
+
 " == Insert support ==
 " Edit reoccurring words at once as in sublime
 Plugin 'terryma/vim-multiple-cursors'
