@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " == Language support ==
+Bundle 'vim-ruby/vim-ruby'
 " Improved Rails support
 Plugin 'tpope/vim-rails'
 " Support for templates and CSS/JS
