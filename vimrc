@@ -46,10 +46,6 @@ endif
 
 " Line numbering
 set number                      " Show line numers
-set relativenumber              " But let them be relative to the cursor position
-" They are slow during moving, so lets ignore them
-autocmd CursorMoved,CursorMovedI * if &relativenumber | set norelativenumber | endif
-autocmd CursorHold,CursorHoldI * set relativenumber
 
 " Indentation
 
