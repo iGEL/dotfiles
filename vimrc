@@ -39,7 +39,6 @@ if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 9
 
   color solarized               " our color theme
-  set bg=dark
   set guioptions-=m               "remove menu bar
   set guioptions-=T               "remove toolbar
 endif
@@ -90,6 +89,7 @@ set sidescroll=1
 
 " Colors
 colorscheme solarized
+set bg=dark
 " Highlight current line & column
 set cul
 set cuc
