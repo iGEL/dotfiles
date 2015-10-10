@@ -98,4 +98,4 @@ au CursorHold,CursorHoldI * set cul | set cuc
 au CursorMoved,CursorMovedI * if &cul | set nocul | set nocuc | endif
 
 " Update stuff after 500ms
-set updatetime=500
+set updatetime=100
