@@ -42,5 +42,5 @@ main = do
       tray = systrayNew
       battery = batteryBarNew defaultBatteryConfig 120
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
-                                        , endWidgets = [ tray, wea, clock, mem, cpu, battery, mpris ]
+                                        , endWidgets = [ clock, tray, wea, mem, cpu, battery, mpris ]
                                         }
