@@ -1,7 +1,7 @@
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin(expand('$HOME/.config/nvim/bundle', 1))
 
 " let Vundle manage Vundle
 " required!

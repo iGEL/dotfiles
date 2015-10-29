@@ -7,8 +7,8 @@ set nocompatible                " choose no compatibility with legacy vi
 " the plugins.
 let mapleader=","
 
-if filereadable(expand("~/.vim/vundle.vim"))
-  source ~/.vim/vundle.vim
+if filereadable(expand("~/.config/nvim/vundle.vim"))
+  source ~/.config/nvim/vundle.vim
 end
 
 syntax on
