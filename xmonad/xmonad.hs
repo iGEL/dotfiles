@@ -21,7 +21,7 @@ main = do
     , startupHook = setWMName "LG3D"
     , modMask = mod4Mask -- Super instead of Meta key
     } `additionalKeys`
-    [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command --lock") --mod4mask is the windows key
+    [ ((mod4Mask .|. shiftMask, xK_z), spawn "dm-tool switch-to-greeter") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")
     ]
 
