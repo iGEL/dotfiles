@@ -46,9 +46,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 . $HOME/dev/files/prompt.zsh
 
-export STUDIO_JDK=/home/igel/dev/jdk1.7.0_25
-export REDIS_PATH=/usr/bin/redis-server
-
 alias lock='gnome-screensaver-command -l'
 alias vol='amixer set Master'
 alias suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend && lock'
@@ -65,4 +62,3 @@ function beep_on_return () (
 )
 add-zsh-hook precmd beep_on_return
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
