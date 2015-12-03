@@ -1,5 +1,5 @@
-#include "/home/igel/.dotfiles/x-resources/solarized"
-#include "/home/igel/.dotfiles/x-resources/font"
+#include ".dotfiles/x-resources/solarized"
+#include ".dotfiles/x-resources/font"
 
 URxvt*loginShell: true
 URxvt.scrollstyle: plain
