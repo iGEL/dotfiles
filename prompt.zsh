@@ -19,6 +19,10 @@ CMD_MAX_EXEC_TIME=5
 # prompt:
 # %F => color dict
 # %f => reset color
+# %K => background color
+# %k => reset background
+# %B => Bold
+# %b => no bold - resets background color :'(
 # %~ => current path
 # %* => time
 # %n => username
@@ -29,8 +33,8 @@ autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
 
 zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
-zstyle ':vcs_info:git*' formats ' %b'
-zstyle ':vcs_info:git*' actionformats ' %b|%a'
+zstyle ':vcs_info:git*' formats ' %F{9}%f%b'
+zstyle ':vcs_info:git*' actionformats ' %B%F{red}%a %%b%K{0}%F{9}%f%b'
 
 # enable prompt substitution
 setopt PROMPT_SUBST
@@ -43,7 +47,7 @@ git_dirty() {
   # check if we're in a git repo
   command git rev-parse --is-inside-work-tree &>/dev/null || return
   # check if it's dirty
-  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '±'
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '%F{9}±%F{white}'
 }
 
 # Displays the exec time of the last command if set threshold was exceeded
@@ -58,7 +62,7 @@ print_time() {
   ((h=${1}/3600))
   ((m=(${1}%3600)/60))
   ((s=${1}%60))
-  printf "%02d:%02d:%02d\n" $h $m $s
+  printf "took %02d:%02d:%02d\n" $h $m $s
 }
 
 record_start_time() {
@@ -69,7 +73,7 @@ add-zsh-hook preexec record_start_time
 print_prompt() {
   vcs_info
   # Add `%*` to display the time
-  print -P '%F{blue}%~%f$vcs_info_msg_0_`git_dirty` $username%f %F{yellow}`cmd_exec_time`%f %*'
+  print -P '%F{white}%K{10}%~%K{0}%F{10}%F{white}$vcs_info_msg_0_`git_dirty` %k%F{0}%f$username%f %F{yellow}`cmd_exec_time`%f %*'
   # Reset value since `preexec` isn't always triggered
   unset cmd_timestamp
 }
