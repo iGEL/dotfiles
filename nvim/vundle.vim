@@ -28,8 +28,12 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
 " Insert closing end after def, if etc
 Plugin 'tpope/vim-endwise'
+" add/change/remove parantheses, brackets & more
+Plugin 'tpope/vim-surround'
 " Add/removes comments
 Plugin 'tomtom/tcomment_vim'
+" Makes plugin commands repeatable
+Plugin 'tpope/vim-repeat'
 
 " == Other additions ==
 " The solarized theme
