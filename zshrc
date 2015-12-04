@@ -62,4 +62,4 @@ function beep_on_return () (
 )
 add-zsh-hook precmd beep_on_return
 
-export PATH=.git/safe/../../bin:$PATH
+export PATH=.git/safe/../../bin:$HOME/bin:$PATH
