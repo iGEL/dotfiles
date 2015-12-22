@@ -62,4 +62,8 @@ function beep_on_return () (
 )
 add-zsh-hook precmd beep_on_return
 
-export PATH=.git/safe/../../bin:$HOME/bin:$PATH
+# Add ./bin on the path, if it's marked as safe
+export PATH=./.git/safe/../../bin:~/bin:$PATH
+
+# Default Ruby version
+chruby 2.2
