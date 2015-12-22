@@ -16,6 +16,11 @@ Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 " HAML + SASS
 Plugin 'tpope/vim-haml'
+" Clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-classpath'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " == Syntax highlightning ==
 " Dockerfile
