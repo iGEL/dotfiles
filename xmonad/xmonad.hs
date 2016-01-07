@@ -6,6 +6,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.EwmhDesktops        (ewmh)
+import XMonad.Hooks.EwmhDesktops
 import System.Taffybar.Hooks.PagerHints (pagerHints)
 
 main = do
@@ -20,6 +21,7 @@ main = do
     , focusFollowsMouse = False
     , startupHook = setWMName "LG3D"
     , modMask = mod4Mask -- Super instead of Meta key
+    , handleEventHook = fullscreenEventHook
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "dm-tool switch-to-greeter") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")
