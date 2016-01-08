@@ -8,6 +8,7 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.EwmhDesktops        (ewmh)
 import XMonad.Hooks.EwmhDesktops
 import System.Taffybar.Hooks.PagerHints (pagerHints)
+import Graphics.X11.ExtraTypes.XF86
 
 main = do
   xmobar <- spawnPipe "~/.cabal/bin/taffybar"
@@ -25,6 +26,10 @@ main = do
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "dm-tool switch-to-greeter") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")
+    , ((0 , xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ +1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+    , ((0 , xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ -1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+    , ((0 , xF86XK_AudioMute), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+    , ((0 , 0x1008FFB2), spawn "pactl set-source-mute @DEFAULT_SOURCE@ toggle")
     ]
 
 myNormalBorderColor = "#586e75"
