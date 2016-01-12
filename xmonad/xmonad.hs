@@ -23,6 +23,7 @@ main = do
     , startupHook = setWMName "LG3D"
     , modMask = mod4Mask -- Super instead of Meta key
     , handleEventHook = fullscreenEventHook
+    , terminal = "x-terminal-emulator"
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "dm-tool switch-to-greeter") --mod4mask is the windows key
     , ((0, xK_Print), spawn "gnome-screenshot")
