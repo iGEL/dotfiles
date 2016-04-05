@@ -48,7 +48,7 @@ Plugin 'tpope/vim-fugitive'
 " Show signs for git
 Plugin 'airblade/vim-gitgutter'
 " File search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " New powerline
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
