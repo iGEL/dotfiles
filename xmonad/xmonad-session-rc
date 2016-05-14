@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+light-locker --no-late-locking --lock-on-suspend --lock-on-lid &
