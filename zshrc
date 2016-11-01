@@ -65,3 +65,4 @@ add-zsh-hook precmd beep_on_return
 # Add ./bin on the path, if it's marked as safe
 export PATH=./.git/safe/../../bin:~/bin:$PATH:~/.gem/bin
 export GEM_HOME=~/.gem
+setxkbmap -layout us -option ctrl:nocaps
