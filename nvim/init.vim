@@ -53,7 +53,6 @@ set smartindent
 set smarttab
 
 set wrap         "wrap lines
-set linebreak    "Wrap lines at convenient points
 
 " No swap files
 set noswapfile
