@@ -1,0 +1,7 @@
+set hintchars=htnesoaigyrwfudp
+" colorscheme solarized-light
+hi Hint font: bold 12px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 1px 0 1px; background: #268bd2; color: #fdf6e3; border-radius: 3px; box-shadow: 0 0 3px #268bd2;
+hi HintActive background-color: #fdf6e3; color: #839496;
+hi HintElem background-color: #eee8d5; color: #839496;
+
+" vim: set ft=pentadactyl:
