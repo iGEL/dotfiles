@@ -14,6 +14,8 @@ setopt histignorealldups sharehistory
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+# Don't store commands starting with a space in the HISTFILE
+setopt HIST_IGNORE_SPACE
 
 # Use modern completion system
 autoload -Uz compinit
