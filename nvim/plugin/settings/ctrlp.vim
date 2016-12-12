@@ -36,10 +36,10 @@ map ,jV :CtrlP vendor<CR>
 " with 30
 let g:ctrlp_match_window='order:ttb,max:30'
 
-if executable('ag')
-  " Use ag (the Silver Searcher) in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if executable('rg')
+  " Use rg (ripgrep) in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'rg %s --files'
 
-  " ag is fast enough that CtrlP doesn't need to cache
+  " rg is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
