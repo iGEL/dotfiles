@@ -21,6 +21,8 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
+" Elm
+Plugin 'ElmCast/elm-vim'
 
 " == Syntax highlightning ==
 " Dockerfile
