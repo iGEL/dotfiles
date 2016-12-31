@@ -98,3 +98,6 @@ au CursorMoved,CursorMovedI * if &cul | set nocul | set nocuc | endif
 
 " Update stuff after 500ms
 set updatetime=100
+
+" Show effects of :s live, and show offscreen matches in a split window
+set inccommand=split
