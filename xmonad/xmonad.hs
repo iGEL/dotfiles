@@ -36,4 +36,4 @@ main = do
 myNormalBorderColor = "#586e75"
 myFocusedBorderColor = "#b58900"
 myBorderWidth = 2
-myWorkspaces = ["editor","browser","chat","four","five"] ++ map show [6..9]
+myWorkspaces = ["editor","terminal","browser","chat","five"] ++ map show [6..9]
