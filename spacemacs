@@ -31,6 +31,11 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     haskell
+     ruby
+     markdown
+     yaml
+     sql
      clojure
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -41,15 +46,18 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     git
      ;; markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     spell-checking
+     syntax-checking
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl
+                      version-control-global-margin t)
+     ;; eyebrowse
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -251,7 +259,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -301,6 +309,36 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (spacemacs/toggle-aggressive-indent-globally-on)
+  (defun clojure-yas-mode-hook ()
+    (clj-refactor-mode 1)
+    (yas-minor-mode 1))
+  (add-hook 'clojure-mode-hook #'clojure-yas-mode-hook)
+  (setq create-lockfiles nil)
+  (defun my-esc (prompt)
+    (cond ((or (evil-insert-state-p)
+               (evil-replace-state-p)
+               (evil-lisp-state-p)
+               (evil-visual-state-p))
+           [escape])))
+
+  (define-key key-translation-map (kbd "C-c") 'my-esc)
+  ;; Works around the fact that Evil uses read-event directly when in operator state, which
+  ;; doesn't use the key-translation-map.
+  (define-key evil-operator-state-map (kbd "C-c") 'keyboard-quit)
+  ;; Not sure what behavior this changes, but might as well set it, seeing the Elisp manual's
+  ;; documentation of it.
+  (set-quit-char "C-c")
+
+  ;; Word boundaries that I'm more used to
+  (modify-syntax-entry ?_ "w")
+
+  (defun set-my-clojure-mode-syntax-table ()
+    (modify-syntax-entry ?_ "w" clojure-mode-syntax-table)
+    (modify-syntax-entry ?- "w" clojure-mode-syntax-table)
+    (modify-syntax-entry ?: "w" clojure-mode-syntax-table))
+
+  (add-hook 'clojure-mode-hook 'set-my-clojure-mode-syntax-table)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
