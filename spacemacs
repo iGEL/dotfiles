@@ -31,6 +31,10 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     html
+     javascript
+     (elm :variables
+          elm-format-on-save t)
      haskell
      ruby
      markdown
@@ -290,7 +294,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup all
    ))
 
 (defun dotspacemacs/user-init ()
@@ -309,11 +313,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (spacemacs/toggle-aggressive-indent-globally-on)
   (defun clojure-yas-mode-hook ()
     (clj-refactor-mode 1)
     (yas-minor-mode 1))
   (add-hook 'clojure-mode-hook #'clojure-yas-mode-hook)
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
   (setq create-lockfiles nil)
   (defun my-esc (prompt)
     (cond ((or (evil-insert-state-p)
