@@ -59,8 +59,8 @@ values."
      spell-checking
      syntax-checking
      (version-control :variables
-                      version-control-diff-tool 'diff-hl
-                      version-control-global-margin t)
+                       version-control-diff-side 'left)
+     terraform
      ;; eyebrowse
      )
    ;; List of additional packages that will be installed without being
@@ -146,9 +146,9 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("DejaVu Sans Mono"
-                               :size 15
-                               :weight normal
+   dotspacemacs-default-font '("iosevka"
+                               :size 16
+                               :weight light
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
@@ -343,6 +343,7 @@ you should place your code here."
     (modify-syntax-entry ?: "w" clojure-mode-syntax-table))
 
   (add-hook 'clojure-mode-hook 'set-my-clojure-mode-syntax-table)
+  (golden-ratio-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
