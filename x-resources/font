@@ -1,4 +1,4 @@
-URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=15
+URxvt.font: xft:iosevka Term:pixelsize=15
 
 Xft.hinting: true
 Xft.hintstyle: hintfull
