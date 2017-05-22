@@ -36,7 +36,7 @@ values."
      (elm :variables
           elm-format-on-save t)
      haskell
-     ruby
+     (ruby :variables ruby-enable-enh-ruby-mode t)
      markdown
      yaml
      sql
@@ -343,8 +343,7 @@ you should place your code here."
     (modify-syntax-entry ?: "w" clojure-mode-syntax-table))
 
   (add-hook 'clojure-mode-hook 'set-my-clojure-mode-syntax-table)
-  (golden-ratio-mode)
-  )
+  (golden-ratio-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
