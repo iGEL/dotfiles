@@ -344,7 +344,8 @@ you should place your code here."
     (modify-syntax-entry ?: "w" clojure-mode-syntax-table))
 
   (add-hook 'clojure-mode-hook 'set-my-clojure-mode-syntax-table)
-  (golden-ratio-mode))
+  (golden-ratio-mode)
+  (setq ruby-insert-encoding-magic-comment nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
