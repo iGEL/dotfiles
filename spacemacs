@@ -261,8 +261,18 @@ values."
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
-   ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
-   ;; derivatives. If set to `relative', also turns on relative line numbers.
+   ;; Control line numbers activation.
+   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
+   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; This variable can also be set to a property list for finer control:
+   ;; '(:relative nil
+   ;;   :disabled-for-modes dired-mode
+   ;;                       doc-view-mode
+   ;;                       markdown-mode
+   ;;                       org-mode
+   ;;                       pdf-view-mode
+   ;;                       text-mode
+   ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -354,6 +364,14 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yapfify which-key web-mode use-package spaceline powerline scss-mode robe pyvenv pug-mode pip-requirements persp-mode org-bullets mmm-mode live-py-mode linum-relative js2-refactor intero hy-mode dash-functional hindent highlight-indentation helm-make helm-flx flycheck-haskell flx-ido fill-column-indicator eyebrowse expand-region evil-surround evil-nerd-commenter evil-matchit evil-magit elm-mode dumb-jump diff-hl define-word csv-mode clj-refactor paredit cider clojure-mode chruby bind-key auto-compile anaconda-mode ace-window ace-link inf-ruby ghc company smartparens highlight evil goto-chg flycheck flyspell-correct yasnippet projectile epl helm helm-core avy markdown-mode org-plus-contrib magit magit-popup git-commit ghub with-editor async hydra pythonic f js2-mode dash yaml-mode ws-butler winum web-beautify volatile-highlights vi-tilde-fringe uuidgen undo-tree toc-org terraform-mode tagedit sql-indent smeargle slim-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode restart-emacs rbenv rake rainbow-delimiters queue pytest pyenv-mode py-isort popwin pkg-info paradox packed orgit open-junk-file nginx-mode neotree multiple-cursors move-text minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode link-hint less-css-mode json-mode js-doc inflections indent-guide hungry-delete hlint-refactor hl-todo highlight-parentheses highlight-numbers helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-hoogle helm-gitignore helm-descbinds helm-css-scss helm-ag haskell-snippets google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-pos-tip flycheck-elm flx fancy-battery exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-search-highlight-persist evil-numbers evil-mc evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu emmet-mode elisp-slime-nav edn diminish cython-mode company-ghci company-ghc column-enforce-mode color-theme-sanityinc-solarized coffee-mode cmm-mode clean-aindent-mode cider-eval-sexp-fu bundler auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
