@@ -360,7 +360,15 @@ you should place your code here."
 
   (add-hook 'clojure-mode-hook 'set-my-clojure-mode-syntax-table)
   (golden-ratio-mode)
-  (setq ruby-insert-encoding-magic-comment nil))
+  (setq ruby-insert-encoding-magic-comment nil)
+
+  ;; Save all files when the window looses focus, also leave insert mode
+  (defun save-all ()
+    (interactive)
+    (when (eq evil-state 'insert)
+      (evil-normal-state))
+    (save-some-buffers t))
+  (add-hook 'focus-out-hook 'save-all))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
