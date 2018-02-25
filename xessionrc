@@ -1,0 +1,12 @@
+syndaemon -i 2.0 -R & # disable touchpad for 2s after each keystroke
+setxkbmap -option ctrl:nocaps
+xrdb ~/.Xresources
+xsetroot -cursor_name left_ptr # set mouse cursor as default
+MONITOR=$(xrandr --query | grep " connected" | grep -v eDP | cut -d ' ' -f 1)
+if [[ $(xrandr --query | grep " connected" | grep -v eDP | cut -d ' ' -f 3) = "3840x2160+1920+0" ]]; then
+  # home display detected
+  xrandr --output $MONITOR --above eDP-1 --primary --mode 2560x1440
+else
+  xrandr --output $MONITOR --right-of eDP-1 --primary
+fi
+feh --bg-fill ~/.dotfiles/earth.jpg
