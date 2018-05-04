@@ -10,3 +10,4 @@ else
   xrandr --output $MONITOR --right-of eDP-1 --primary
 fi
 feh --bg-fill ~/.dotfiles/earth.jpg
+xscreensaver -no-splash &

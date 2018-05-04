@@ -23,7 +23,7 @@ main = do
     , handleEventHook = fullscreenEventHook
     , terminal = "x-terminal-emulator"
     } `additionalKeys`
-    [ ((mod4Mask .|. shiftMask, xK_z), spawn "light-locker-command --lock") --mod4mask is the windows key
+    [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command --lock")
     , ((0, xK_Print), spawn "gnome-screenshot")
     , ((0 , xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ +1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
     , ((0 , xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ -1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
