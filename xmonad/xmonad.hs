@@ -1,9 +1,7 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
-import System.IO
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.EwmhDesktops        (ewmh)
 import XMonad.Hooks.EwmhDesktops
@@ -11,10 +9,10 @@ import System.Taffybar.Hooks.PagerHints (pagerHints)
 import Graphics.X11.ExtraTypes.XF86
 
 main = do
-  xmobar <- spawnPipe "~/.cabal/bin/taffybar"
-  xmonad $ ewmh $ pagerHints $ defaultConfig
-    { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts  $  layoutHook defaultConfig
+  _ <- spawnPipe "/usr/bin/taffybar"
+  xmonad $ ewmh $ pagerHints $ def
+    { manageHook = manageDocks <+> manageHook def
+    , layoutHook = avoidStruts  $  layoutHook def
     , normalBorderColor = myNormalBorderColor
     , focusedBorderColor = myFocusedBorderColor
     , borderWidth = myBorderWidth
