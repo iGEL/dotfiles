@@ -68,3 +68,4 @@ add-zsh-hook precmd beep_on_return
 export PATH=./.git/safe/../../bin:~/bin:$PATH:~/.gem/bin
 export GEM_HOME=~/.gem
 setxkbmap -layout us -option ctrl:nocaps
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
