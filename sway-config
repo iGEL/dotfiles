@@ -214,3 +214,4 @@ bar {
 
 exec "xrdb -merge ~/.Xresources"
 exec "~/bin/mako"
+exec "~/bin/configure-screens"
