@@ -9,8 +9,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec "gnome-flashback"
-
 font pango:DejaVu Sans Mono 8
 
 ### Variables
@@ -27,7 +25,7 @@ set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
 
-# default_border pixel
+default_border pixel
 # gabs inner 2
 ### Output configuration
 #
@@ -130,8 +128,8 @@ set $menu dmenu_run
     bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-    bindsym $mod+w exec "i3-msg move workspace to output DP-2-1; i3-msg move workspace to output DP-2-2; i3-msg move workspace to output DP-2-3;true" # The output names change, but sending to an inactive output doesn't do anything
-    bindsym $mod+e move workspace to output eDP-1
+    bindsym $mod+w move workspace to output right
+    bindsym $mod+e move workspace to output left
 #
 # Layout stuff:
 #
@@ -198,7 +196,8 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; paplay /u
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 bindsym 0x1008FFB2 exec "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-bindsym $mod+Shift+z exec "i3lock -c 002c53; systemctl suspend"
+bindsym $mod+Shift+z exec "swaylock -c 086dff; systemctl suspend"
+bindsym $mod+Shift+x exec "swaylock -c 086dff"
 #
 # Status Bar:
 #
@@ -212,3 +211,6 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+exec "xrdb -merge ~/.Xresources"
+exec "~/bin/mako"
