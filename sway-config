@@ -197,7 +197,8 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; paplay /u
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +1.5%; paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 bindsym 0x1008FFB2 exec "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-bindsym $mod+Shift+z exec "$lock"
+bindsym $mod+Shift+z exec "systemctl suspend"
+bindsym $mod+Shift+x exec "$lock"
 #
 # Status Bar:
 #
