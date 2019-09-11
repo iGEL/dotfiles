@@ -24,7 +24,7 @@ set $right l
 set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
-set $lock swaylock -c 086dff
+set $lock if [ $(whoami) = "igel" ];then swaylock -i /home/igel/Pictures/br218.jpg; else swaylock -i /home/billfront/Pictures/runner.png;fi
 
 default_border pixel
 # gabs inner 2
