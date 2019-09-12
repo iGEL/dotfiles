@@ -24,7 +24,7 @@ set $right l
 set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
-set $lock if [ $(whoami) = "igel" ];then swaylock -i /home/igel/Pictures/br218.jpg; else swaylock -i /home/billfront/Pictures/runner.png;fi
+set $lock if [ $(whoami) = "igel" ];then swaylock -f -i /home/igel/Pictures/br218.jpg; else swaylock -f -i /home/billfront/Pictures/runner.png;fi
 
 default_border pixel
 # gabs inner 2
@@ -218,6 +218,6 @@ exec "~/bin/mako"
 exec "~/bin/configure-screens"
 exec swayidle -w \
           timeout 900 'swaymsg "output * dpms off"' \
-          timeout 930 '$lock -f' \
+          timeout 930 '$lock' \
                resume 'swaymsg "output * dpms on"' \
-          before-sleep '$lock -f'
+          before-sleep '$lock'
