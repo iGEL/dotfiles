@@ -1,14 +1,12 @@
 " Most here is lifted from https://github.com/skwp/dotfiles
 set nocompatible                " choose no compatibility with legacy vi
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-let mapleader=","
+" Change leader to a space because the backslash is too far away
+" That means all \x commands turn into <space>x
+let mapleader=" "
 
-if filereadable(expand("~/.config/nvim/vundle.vim"))
-  source ~/.config/nvim/vundle.vim
+if filereadable(expand("~/.config/nvim/vim-plug.vim"))
+  source ~/.config/nvim/vim-plug.vim
 end
 
 syntax on
@@ -38,7 +36,7 @@ set smartcase                   " ... unless they contain at least one capital l
 if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 9
 
-  color solarized               " our color theme
+  color solarized                 " our color theme
   set guioptions-=m               "remove menu bar
   set guioptions-=T               "remove toolbar
 endif
@@ -88,7 +86,7 @@ set sidescroll=1
 
 " Colors
 colorscheme solarized
-set bg=light
+set bg=dark
 " Highlight current line & column
 set cul
 set cuc
