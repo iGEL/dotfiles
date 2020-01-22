@@ -16,8 +16,10 @@ Plug 'tpope/vim-haml'
 " Clojure
 " Plug 'guns/vim-clojure-static'
 " Plug 'tpope/vim-classpath'
-" Plug 'tpope/vim-fireplace'
-" Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-fireplace'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Elm
 " Plug 'ElmCast/elm-vim'
@@ -41,7 +43,7 @@ Plug 'tpope/vim-surround'
 " Add/removes comments
 Plug 'tpope/vim-commentary'
 " Makes plugin commands repeatable
-" Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " == Other additions ==
 " The solarized theme
