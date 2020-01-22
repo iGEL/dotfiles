@@ -48,14 +48,16 @@ Plug 'tpope/vim-commentary'
 Plug 'altercation/vim-colors-solarized'
 " Use git inside of vim
 Plug 'tpope/vim-fugitive'
+" Linting
+Plug 'dense-analysis/ale'
 " Show signs for git
 Plug 'airblade/vim-gitgutter'
 " File search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " New powerline
-" Plug 'bling/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Airline theme
 " Plug 'paranoida/vim-airlineish'
