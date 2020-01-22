@@ -1,3 +1,5 @@
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+
 nnoremap <silent> <space>t :Files<CR>
 
 " Additional mapping for buffer search
