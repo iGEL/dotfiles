@@ -35,7 +35,7 @@ Plug 'rust-lang/rust.vim'
 " Edit reoccurring words at once as in sublime
 " Plug 'terryma/vim-multiple-cursors'
 " Insert and delete matching brackets and quotes
-" Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 " Insert closing end after def, if etc
 Plug 'tpope/vim-endwise'
 " add/change/remove parantheses, brackets & more
