@@ -86,7 +86,7 @@ set sidescroll=1
 
 " Colors
 colorscheme solarized
-set bg=dark
+set bg=light
 " Highlight current line & column
 set cul
 set cuc

@@ -21,7 +21,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvt
+set $term gnome-terminal
 # Your preferred application launcher
 set $menu dmenu_run
 set $lock if [ $(whoami) = "igel" ];then swaylock -f -i /home/igel/Pictures/br218.jpg; else swaylock -f -i /home/billfront/Pictures/runner.png;fi
