@@ -4,6 +4,7 @@ set nocompatible                " choose no compatibility with legacy vi
 " Change leader to a space because the backslash is too far away
 " That means all \x commands turn into <space>x
 let mapleader=" "
+let maplocalleader=" "
 
 if filereadable(expand("~/.config/nvim/vim-plug.vim"))
   source ~/.config/nvim/vim-plug.vim
