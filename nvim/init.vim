@@ -100,3 +100,7 @@ set updatetime=100
 
 " Show effects of :s live, and show offscreen matches in a split window
 set inccommand=split
+
+" Open splits on the right and below instead of left and above
+set splitbelow
+set splitright
