@@ -16,7 +16,7 @@ Plug 'tpope/vim-haml'
 " Clojure
 " Plug 'guns/vim-clojure-static'
 " Plug 'tpope/vim-classpath'
-Plug 'Olical/conjure', {'tag': 'v3.0.0'}
+Plug 'Olical/conjure'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'

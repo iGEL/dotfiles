@@ -6,6 +6,11 @@ set nocompatible                " choose no compatibility with legacy vi
 let mapleader=" "
 let maplocalleader=" "
 
+let g:conjure#client#clojure#nrepl#mapping#run_all_tests="rta"
+let g:conjure#client#clojure#nrepl#mapping#run_current_ns_tests="rtn"
+let g:conjure#client#clojure#nrepl#mapping#run_alternate_ns_tests="rtN"
+let g:conjure#client#clojure#nrepl#mapping#run_current_test="rtc"
+
 if filereadable(expand("~/.config/nvim/vim-plug.vim"))
   source ~/.config/nvim/vim-plug.vim
 end
