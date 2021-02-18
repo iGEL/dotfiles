@@ -19,7 +19,6 @@ Plug 'tpope/vim-haml'
 Plug 'Olical/conjure'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 " Elm
 " Plug 'ElmCast/elm-vim'
