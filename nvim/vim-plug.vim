@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 " == Language support ==
 
+Plug 'sheerun/vim-polyglot'
+
 " Ruby & Rails
 " Improved Rails support
 Plug 'tpope/vim-rails'
@@ -20,13 +22,6 @@ Plug 'Olical/conjure'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'guns/vim-sexp'
 
-" Elm
-" Plug 'ElmCast/elm-vim'
-
-" Rust
-Plug 'rust-lang/rust.vim'
-
-" == Syntax highlightning ==
 " Dockerfile
 " Plug 'ekalinin/Dockerfile.vim'
 
