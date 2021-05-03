@@ -47,12 +47,12 @@ function! s:sexp_mappings() abort
   " nmap <buffer> >f  <Plug>(sexp_swap_list_forward)
   " nmap <buffer> <e  <Plug>(sexp_swap_element_backward)
   " nmap <buffer> >e  <Plug>(sexp_swap_element_forward)
-  nmap <buffer> <localleader>mB  <Plug>(sexp_emit_head_element)
-  nmap <buffer> <localleader>mb  <Plug>(sexp_emit_tail_element)
-  nmap <buffer> <localleader>mS  <Plug>(sexp_capture_prev_element)
-  nmap <buffer> <localleader>ms  <Plug>(sexp_capture_next_element)
-  nmap <buffer> <localleader>mr  <Plug>(sexp_raise_list)
-  nmap <buffer> <localleader>mR  <Plug>(sexp_raise_element)
+  nmap <buffer> <localleader>kB  <Plug>(sexp_emit_head_element)
+  nmap <buffer> <localleader>kb  <Plug>(sexp_emit_tail_element)
+  nmap <buffer> <localleader>kS  <Plug>(sexp_capture_prev_element)
+  nmap <buffer> <localleader>ks  <Plug>(sexp_capture_next_element)
+  nmap <buffer> <localleader>kr  <Plug>(sexp_raise_list)
+  nmap <buffer> <localleader>kR  <Plug>(sexp_raise_element)
 endfunction
 
 function! s:setup() abort
