@@ -51,6 +51,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 " Linting
 Plug 'dense-analysis/ale'
+" Language server support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Show signs for git
 Plug 'airblade/vim-gitgutter'
 " File search
