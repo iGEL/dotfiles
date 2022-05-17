@@ -237,7 +237,7 @@ bar {
 }
 
 exec "xrdb -merge ~/.Xresources"
-exec "~/bin/mako"
+exec "/usr/local/bin/mako"
 exec "~/bin/configure-screens"
 exec swayidle -w \
           timeout 900 'swaymsg "output * dpms off"' \
