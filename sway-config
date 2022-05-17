@@ -39,7 +39,7 @@ set $menu bemenu-run --fn $uifont -p "❯" --tf "$green" --tb "$base03" --ff "$g
 
 set $lock if [ $(whoami) = "igel" ];then swaylock -f -i /home/igel/Pictures/br628.jpg; else swaylock -f -i /home/billfront/Pictures/runner.png;fi
 input type:keyboard {
-    xkb_layout us,de
+    xkb_layout workman,us,de
     xkb_options grp:win_space_toggle
 }
 default_border pixel
