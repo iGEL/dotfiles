@@ -236,9 +236,11 @@ bar {
     }
 }
 
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
 exec "xrdb -merge ~/.Xresources"
 exec "/usr/local/bin/mako"
 exec "~/bin/configure-screens"
+exec "dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY"
 exec swayidle -w \
           timeout 900 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
