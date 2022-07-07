@@ -4,6 +4,7 @@ if exists("g:loaded_sexp_mappings_for_me") || &cp
   finish
 endif
 let g:loaded_sexp_mappings_for_me = 1
+let g:sexp_enable_insert_mode_mappings = 0
 
 function! s:map_sexp_wrap(type, target, left, right, pos)
   execute (a:type ==# 'v' ? 'x' : 'n').'noremap'
