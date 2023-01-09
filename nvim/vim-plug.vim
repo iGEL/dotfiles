@@ -5,7 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 " == Language support ==
 
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Ruby & Rails
 " Improved Rails support
@@ -41,7 +42,7 @@ Plug 'tpope/vim-repeat'
 
 " == Other additions ==
 " The solarized theme
-Plug 'altercation/vim-colors-solarized'
+Plug 'shaunsingh/solarized.nvim'
 " Use git inside of vim
 Plug 'tpope/vim-fugitive'
 " Linting

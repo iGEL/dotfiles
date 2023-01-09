@@ -6,6 +6,11 @@ set nocompatible                " choose no compatibility with legacy vi
 let mapleader=" "
 let maplocalleader=" "
 
+lua <<EOF
+vim.opt.signcolumn = 'yes'
+vim.opt.termguicolors = true
+EOF
+
 let g:conjure#client#clojure#nrepl#mapping#run_all_tests="rta"
 let g:conjure#client#clojure#nrepl#mapping#run_current_ns_tests="rtn"
 let g:conjure#client#clojure#nrepl#mapping#run_alternate_ns_tests="rtN"
@@ -50,11 +55,11 @@ endif
 " Line numbering
 set number                      " Show line numers
 
-" Indentation
+" Indentation (Disabled in favor of treesitter for now)
 
-set autoindent
-set smartindent
-set smarttab
+" set autoindent
+" set smartindent
+" set smarttab
 
 set wrap         "wrap lines
 
@@ -91,7 +96,10 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Colors
-colorscheme solarized
+lua <<EOF
+vim.g.solarized_borders = true
+require('solarized').set()
+EOF
 set bg=light
 " Highlight current line & column
 set cul
