@@ -37,7 +37,7 @@ set $uifont "iosevka Term 12"
 # on the original workspace that the command was run on.
 set $menu bemenu-run --fn $uifont -p "❯" --tf "$green" --tb "$base03" --ff "$green" --fb "$base03" --hb "$base03" --hf "$blue" --nb "$base03" --nf "$base0"
 
-set $lock if [ $(whoami) = "igel" ];then swaylock -f -i /home/igel/Pictures/br628.jpg; else swaylock -f -i /home/billfront/Pictures/runner.png;fi
+set $lock swaylock -f -i ~/Pictures/background.webp
 input type:keyboard {
     xkb_layout us,workman,de
     xkb_options grp:win_space_toggle
@@ -47,7 +47,7 @@ default_border pixel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-# output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/background.webp fill
 #
 # Example configuration:
 #
