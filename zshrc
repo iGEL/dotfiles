@@ -74,4 +74,4 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 eval "$(direnv hook zsh)"
 
-. $HOME/.asdf/asdf.sh
+[ -f ~/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
