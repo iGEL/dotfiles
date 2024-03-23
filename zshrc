@@ -18,8 +18,8 @@ HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_SPACE
 
 # Use modern completion system
-autoload -Uz compinit
-compinit
+skip_global_compinit=1
+source ~/buntuble/downloads/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
