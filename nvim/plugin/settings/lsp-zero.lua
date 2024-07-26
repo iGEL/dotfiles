@@ -1,15 +1,11 @@
-local lsp = require('lsp-zero')
-lsp.preset('recommended')
+require("mason").setup()
+require("mason-lspconfig").setup()
+local lsp_zero = require('lsp-zero')
 
-lsp.configure('clojure-lsp', {
-  on_attach = function(client, bufnr)
-    print('hello clojure-lsp')
-  end
-})
-lsp.nvim_workspace()
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
 
-lsp.setup({
-    root_dir = require('lspconfig.util').root_pattern({'.git'})
-})
-
-vim.diagnostic.config({ virtual_text = true })
+require('lspconfig').clojure_lsp.setup({})
