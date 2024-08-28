@@ -68,7 +68,7 @@ add-zsh-hook precmd beep_on_return
 export PATH=./.git/safe/../../bin:~/bin:$PATH:~/.gem/bin:~/.cargo/bin:~/.local/bin
 export GEM_HOME=~/.gem
 setxkbmap -layout us -option ctrl:nocaps
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
