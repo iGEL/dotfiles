@@ -17,9 +17,6 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 
-" Copilot
-Plug 'github/copilot.vim'
-
 "  Snippets
 Plug 'L3MON4D3/LuaSnip'
 " Snippet collection (Optional)
