@@ -47,7 +47,6 @@ set smartcase                   " ... unless they contain at least one capital l
 if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 9
 
-  color solarized                 " our color theme
   set guioptions-=m               "remove menu bar
   set guioptions-=T               "remove toolbar
 endif
@@ -97,8 +96,7 @@ set sidescroll=1
 
 " Colors
 lua <<EOF
-vim.g.solarized_borders = true
-require('solarized').set()
+vim.cmd.colorscheme "selenized"
 EOF
 set bg=light
 " Highlight current line & column

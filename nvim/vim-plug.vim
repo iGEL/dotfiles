@@ -57,8 +57,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 
 " == Other additions ==
-" The solarized theme
-Plug 'shaunsingh/solarized.nvim'
+" The selenized theme
+Plug 'calind/selenized.nvim'
 " Use git inside of vim
 Plug 'tpope/vim-fugitive'
 " Linting

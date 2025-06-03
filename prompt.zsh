@@ -73,7 +73,7 @@ add-zsh-hook preexec record_start_time
 print_prompt() {
   vcs_info
   # Add `%*` to display the time
-  print -P '%F{white}%K{10}%~%K{0}%F{10}%F{white}$vcs_info_msg_0_`git_dirty` %k%F{0}%f$username%f %F{yellow}`cmd_exec_time`%f %*'
+  print -P '%F{black}%K{10}%~%K{0}%F{10}%F{white}$vcs_info_msg_0_`git_dirty` %k%F{0}%f$username%f %F{yellow}`cmd_exec_time`%f %*'
   # Reset value since `preexec` isn't always triggered
   unset cmd_timestamp
 }
