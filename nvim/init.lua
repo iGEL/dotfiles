@@ -36,10 +36,6 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
 
--- Colors & scheme
-vim.opt.background = "light"
-vim.opt.termguicolors = true
-
 -- Displaying
 vim.opt.guicursor = 'a:blinkon0' -- No cursor blinking
 vim.opt.visualbell = true -- No sounds
@@ -75,3 +71,7 @@ vim.opt.splitright = true
 require("config.lazy")
 require("config.keymaps")
 require("config.lsp")
+
+-- Colors & scheme
+vim.opt.termguicolors = true
+vim.opt.background = "light"
