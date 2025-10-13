@@ -53,3 +53,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 eval "$(direnv hook zsh)"
 
 [ -f ~/.asdf/asdf.sh ] && . $HOME/.asdf/asdf.sh
+
+alias claude="/home/pitch/.claude/local/claude"
